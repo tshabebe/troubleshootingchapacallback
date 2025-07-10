@@ -7,11 +7,13 @@ app.use(express.urlencoded({ extended: true }))
 
 app.get('/', (req, res) => {
   console.log('GET / - Body:', req.body)
+  console.log('GET / - Headers:', req.headers)
   res.send('Hello, world!')
 })
 
 app.post('/', (req, res) => {
   console.log('POST / - Body:', req.body)
+  console.log('POST / - Headers:', req.headers)
   res.send('Hello from post!')
 })
 
